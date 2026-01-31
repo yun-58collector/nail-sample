@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指先から、新しい私。 | Premium Nail Tips Shop</title>
+    <meta name="description" content="サロン級の輝きが、たった1分で。あなたの日常を魔法のように彩る、ハンドメイド・ネイルチップ専門ショップ。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Dancing+Script:wght@600&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fairy-pink': '#FFD1DC',
+                        'fairy-blue': '#B2E2F2',
+                        'fairy-white': '#FFF9FB',
+                        'fairy-accent': '#FF85A2',
+                    },
+                    fontFamily: {
+                        maru: ['"Zen Maru Gothic"', 'serif'],
+                        en: ['"Dancing Script"', 'cursive'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'sparkle': 'sparkle 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
+                            '50%': { opacity: 1, transform: 'scale(1.2)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #FFF9FB; overflow-x: hidden; }
+        .font-maru { font-family: 'Zen Maru Gothic', serif; }
+        .font-en { font-family: 'Dancing Script', cursive; }
+        
+        /* スカラップ（波打ち）境界線 */
+        .scallop-top {
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/1999/xlink" viewBox="0 0 100 20"><path d="M0 20 L0 10 Q5 0 10 10 T20 10 T30 10 T40 10 T50 10 T60 10 T70 10 T80 10 T90 10 T100 10 L100 20 Z" fill="black"/></svg>');
+            mask-size: 50px 20px;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        /* キラキラ演出 */
+        .sparkle-particle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 2s infinite;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <header class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass-card">
+        <h1 class="font-en text-3xl text-fairy-accent">Nail Magic</h1>
+        <nav class="hidden md:flex gap-8 font-maru font-bold text-fairy-accent">
+            <a href="#about" class="hover:opacity-60 transition">About</a>
+            <a href="#collection" class="hover:opacity-60 transition">Collection</a>
+            <a href="#benefit" class="hover:opacity-60 transition">Benefit</a>
+        </nav>
+        <a href="#shop" class="bg-fairy-accent text-white px-6 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition transform font-maru">Shop</a>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-fairy-blue via-fairy-pink to-fairy-white">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full mix-blend-overlay animate-float"></div>
+            <div class="absolute bottom-40 right-20 w-48 h-48 bg-white rounded-full mix-blend-overlay animate-float" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-center md:text-left">
+                <span class="font-en text-4xl text-white drop-shadow-md mb-4 block">Fairy Tale on your tips</span>
+                <h2 class="font-maru text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-6">
+                    指先から、新しい私。<br>
+                    <span class="text-fairy-accent">特別な日を魔法で彩る。</span>
+                </h2>
+                <p class="text-lg mb-8 leading-relaxed opacity-80">
+                    サロン級の輝きが、たった1分で。<br>
+                    あなたの日常を物語のように美しく、もっと輝かせます。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#shop" class="bg-fairy-accent text-white text-xl px-12 py-4 rounded-full font-bold shadow-xl hover:bg-opacity-90 transition-all transform hover:-translate-y-1 font-maru">
+                        今すぐショップを見る
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-full aspect-square rounded-[40px] overflow-hidden shadow-2xl animate-float border-8 border-white">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=1200" alt="Beautiful Nail Art" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -top-10 -right-10 text-white opacity-60 font-en text-8xl">✨</div>
+                <div class="absolute -bottom-10 -left-10 text-white opacity-60 font-en text-8xl" style="animation-delay: 1s;">✨</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefit" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-maru text-3xl md:text-4xl font-bold mb-4">指先が変われば、心も弾む</h2>
+                <div class="w-20 h-1 bg-fairy-pink mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="reveal p-8 rounded-3xl bg-fairy-blue bg-opacity-10 text-center hover:shadow-xl transition duration-500">
+                    <div class="text-5xl mb-6">⏰</div>
+                    <h3 class="font-maru text-xl font-bold mb-4">たった1分の装着</h3>
+                    <p class="opacity-70 leading-relaxed">忙しい朝も、急なお出かけも。シールを貼るだけでプロ級の仕上がり。</p>
+                </div>
+                <div class="reveal p-8 rounded-3xl bg-fairy-pink bg-opacity-10 text-center hover:shadow-xl transition duration-500" style="transition-delay: 0.2s;">
+                    <div class="text-5xl mb-6">💎</div>
+                    <h3 class="font-maru text-xl font-bold mb-4">自爪を傷めない</h3>
+                    <p class="opacity-70 leading-relaxed">オフも簡単。爪への負担を最小限に、週末だけのおしゃれも思いのまま。</p>
+                </div>
+                <div class="reveal p-8 rounded-3xl bg-fairy-blue bg-opacity-10 text-center hover:shadow-xl transition duration-500" style="transition-delay: 0.4s;">
+                    <div class="text-5xl mb-6">👗</div>
+                    <h3 class="font-maru text-xl font-bold mb-4">着せ替え自由自在</h3>
+                    <p class="opacity-70 leading-relaxed">洋服を選ぶように、ネイルもコーディネート。何通りもの自分を楽しんで。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="py-24 bg-fairy-blue bg-opacity-5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div>
+                    <span class="font-en text-2xl text-fairy-accent">New Collection</span>
+                    <h2 class="font-maru text-3xl md:text-4xl font-bold mt-2">新作ラインナップ</h2>
+                </div>
+                <a href="#shop" class="text-fairy-accent font-bold hover:underline mt-4 md:mt-0 font-maru">すべてのデザインを見る →</a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="reveal group relative overflow-hidden rounded-2xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80&w=600" alt="Nail 1" class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-white font-maru text-sm">夢見るパステルパール</p>
+                    </div>
+                </div>
+                <div class="reveal group relative overflow-hidden rounded-2xl shadow-lg" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600" alt="Nail 2" class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-white font-maru text-sm">星屑のオーロラ</p>
+                    </div>
+                </div>
+                <div class="reveal group relative overflow-hidden rounded-2xl shadow-lg" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1604654894611-6973b376cbde?auto=format&fit=crop&q=80&w=600" alt="Nail 3" class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-white font-maru text-sm">乙女のローズクォーツ</p>
+                    </div>
+                </div>
+                <div class="reveal group relative overflow-hidden rounded-2xl shadow-lg" style="transition-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1522337360744-c7347c2dea07?auto=format&fit=crop&q=80&w=600" alt="Nail 4" class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-white font-maru text-sm">雨上がりの紫陽花</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 reveal">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=1200" alt="Craftmanship" class="rounded-[60px] shadow-2xl">
+                        <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-fairy-pink rounded-full flex items-center justify-center text-white font-en text-xl text-center p-4 transform rotate-12 shadow-lg">
+                            Handmade with Love
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 reveal">
+                    <span class="font-en text-3xl text-fairy-accent mb-4 block">Message</span>
+                    <h2 class="font-maru text-3xl font-bold mb-6">指先が綺麗だと、<br>心まで上を向く。</h2>
+                    <p class="text-lg leading-loose opacity-80 mb-8">
+                        ふとした時に目に入る自分の指先。そこにお気に入りの色が乗っているだけで、今日一日が少しだけ特別になる。<br><br>
+                        そんな「小さな魔法」をすべての人に届けたくて、1つずつ丁寧に心を込めてお作りしています。あなたの物語の一部になれますように。
+                    </p>
+                    <div class="font-en text-4xl text-fairy-accent">Nail Magic Artist</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-24 bg-fairy-pink bg-opacity-30 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="reveal">
+                <span class="bg-white text-fairy-accent px-6 py-2 rounded-full font-bold font-maru shadow-sm mb-6 inline-block">初回限定特典</span>
+                <h2 class="font-maru text-4xl md:text-5xl font-bold mb-8">あなたの指先に、魔法を。</h2>
+                <p class="text-xl mb-12 opacity-80">今ならはじめての方全員に<br><span class="font-bold border-b-2 border-fairy-accent text-gray-800">「強力装着テープ＆ミニやすりセット」</span>をプレゼント中</p>
+                <a href="#" class="inline-block bg-fairy-accent text-white text-2xl px-16 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition transform font-maru">
+                    ショップでデザインを探す
+                </a>
+                <p class="mt-8 text-sm opacity-60">※公式オンラインショップ（BASE）へ移動します</p>
+            </div>
+        </div>
+        <div class="absolute top-10 left-1/4 w-4 h-4 bg-white rounded-full animate-sparkle"></div>
+        <div class="absolute bottom-20 right-1/4 w-3 h-3 bg-white rounded-full animate-sparkle" style="animation-delay: 0.5s;"></div>
+        <div class="absolute top-1/2 left-10 w-2 h-2 bg-white rounded-full animate-sparkle" style="animation-delay: 1.2s;"></div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-en text-4xl mb-8">Nail Magic</h2>
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="#" class="hover:text-fairy-pink transition">Instagram</a>
+                <a href="#" class="hover:text-fairy-pink transition">Twitter</a>
+                <a href="#" class="hover:text-fairy-pink transition">LINE</a>
+            </div>
+            <p class="text-sm opacity-40 tracking-widest">&copy; 2024 Nail Magic. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 軽いパララックス効果
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.animate-float').forEach(el => {
+                const speed = 0.05;
+                el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
